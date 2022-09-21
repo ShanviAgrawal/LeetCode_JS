@@ -1,0 +1,7 @@
+Defanging an IP Address
+
+var defangIPaddr = function(address) {
+    
+   addrNew = address.replaceAll('.','[.]');
+    return addrNew;
+};
