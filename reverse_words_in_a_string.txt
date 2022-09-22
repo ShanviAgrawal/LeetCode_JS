@@ -1,0 +1,31 @@
+Javascript
+
+var reverseWords = function(s) {
+    array=[];
+    reversedStr=[];
+    array = s.split(' ');
+    for(i=0; i<array.length;i++){
+        reversedStr[i]= array[i].slice(0 ,array[i].length , -1)
+    }
+    
+    return reversedStr.join(' ');
+};
+
+
+var reverseWords = function(s) {
+    array=[];
+    reversedStr=[];
+    array = s.split(' ');
+    for(i=0; i<array.length;i++){
+        reversedStr[i]= [...array[i]].reverse();
+    }
+    
+    return reversedStr.join(' ');
+};
+
+
+Python
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        return " ".join([x[::-1] for x in s.split(" ")])
+        
