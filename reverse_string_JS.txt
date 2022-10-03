@@ -1,0 +1,31 @@
+var reverseWords = function(s) {
+    var splitString;
+    var joinArray1 ="" ;
+    splitString = s.split(" ");
+    for (i=0; i< splitString.length; i++)
+    {
+    var splitString2 = splitString[i].split("");   
+    var reverseArray = splitString2.reverse();
+    var joinArray = reverseArray.join(""); 
+     joinArray1 = joinArray1. concat(joinArray + " ")  ;   
+    }
+    
+    return joinArray1.trim();
+};
+
+
+optimize:
+
+var reverseWords = function(s) {
+    var splitString;
+    var joinArray1 ="" ;
+    splitString = s.split(" ");
+    for (i=0; i< splitString.length; i++)
+    {
+    var splitString2 = splitString[i].split("");   
+    var reverseArray = splitString2.reverse(); 
+     joinArray1 = joinArray1. concat(reverseArray.join("") + " ")  ;   
+    }
+    
+    return joinArray1.trim();
+};

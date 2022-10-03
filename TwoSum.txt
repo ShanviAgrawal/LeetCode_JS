@@ -17,3 +17,21 @@ var twoSum = function(nums, target) {
     
     
 };
+
+
+or return [i,j]; // no need of taking an array
+
+O(n) solution - use hashmap
+
+var twoSum = function(nums, target) {
+    var map = {}; // defined map
+    for (var i=0; i < nums.length; i++){
+       var value = nums[i];  
+       var complementPair = target - value;
+        if(map[complementPair] !== undefined){
+            return [map[complementPair] , i];
+        }else{
+            map[value] = i;
+        }
+    }    
+};
